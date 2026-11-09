@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jungle Cook | Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="firebase-auth.js" type="module"></script>
+</head>
+<body class="home-page">
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="logo" href="index.html" aria-label="Jungle Cook home">
+        <span class="bubble blue"></span><span class="bubble gold"></span><span class="bubble green"></span><span class="bubble pink"></span>
+        <span class="logo-words">The Jungle Cook</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="main-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-menu" class="main-menu" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="index.html">Browse</a>
+        <a href="index.html">Create Recipe</a>
+        <a class="your-recipes-link" href="index.html" hidden>Your Recipes</a>
+        <a class="login-link" href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+  <main class="home-main">
+    <div class="hero-circles">
+      <div class="small-circle">Want to be a Jungle Cook? Go ahead and the kitchen is yours!</div>
+      <section class="hero-circle">
+        <h1>The Jungle Cook</h1>
+        <p>The home to various<br>recipes of your choice.<br>Add your own recipe<br>today and fill the world<br>with joy!</p>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <span>Copyright © 2019 The Jungle Cook</span>
+    <div class="footer-links">
+      <a href="login.html">Login</a><a href="index.html">Recipes by Category</a><a href="index.html">Privacy and Copyright</a><a href="index.html">Create Recipe</a><a href="index.html">Your Recipes</a>
+    </div>
+    <div class="socials"><span aria-label="Facebook">f</span><span aria-label="Instagram">◎</span></div>
+  </footer>
+</body>
+</html>

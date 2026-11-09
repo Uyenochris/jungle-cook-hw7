@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jungle Cook | Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="firebase-auth.js" type="module"></script>
+</head>
+<body class="login-page">
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="logo" href="index.html" aria-label="Jungle Cook home">
+        <span class="bubble blue"></span><span class="bubble gold"></span><span class="bubble green"></span><span class="bubble pink"></span>
+        <span class="logo-words">The Jungle Cook</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="main-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-menu" class="main-menu" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html">Browse</a>
+        <a href="index.html">Create Recipe</a>
+        <a class="your-recipes-link" href="index.html" hidden>Your Recipes</a>
+        <a class="login-link" href="login.html" aria-current="page">Login</a>
+      </nav>
+    </div>
+  </header>
+  <main class="auth-layout">
+    <section class="auth-panel login-panel">
+      <h1>Login Here!</h1>
+      <form class="demo-form" data-demo-form="login">
+        <label for="login-email">Email Address</label>
+        <input id="login-email" type="email" name="email" placeholder="Email Address" required autocomplete="email">
+        <label for="login-password">Password</label>
+        <input id="login-password" type="password" name="password" placeholder="Password" required minlength="6" autocomplete="current-password">
+        <button class="yellow-button" type="submit">Login</button>
+        <p class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <section class="auth-panel signup-panel">
+      <p class="small-intro">don't have an account?</p>
+      <h2>Sign Up!</h2>
+      <form class="demo-form" data-demo-form="signup">
+        <label for="signup-first">First Name</label>
+        <input id="signup-first" name="firstName" type="text" placeholder="First Name" required autocomplete="given-name">
+        <label for="signup-last">Last Name</label>
+        <input id="signup-last" name="lastName" type="text" placeholder="Last Name" required autocomplete="family-name">
+        <label for="signup-email">Email Address</label>
+        <input id="signup-email" name="email" type="email" placeholder="Email Address" required autocomplete="email">
+        <label for="signup-password">Password</label>
+        <input id="signup-password" name="password" type="password" placeholder="Password" required minlength="6" autocomplete="new-password">
+        <button class="yellow-button" type="submit">Sign Up</button>
+        <p class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <span>Copyright © 2019 The Jungle Cook</span>
+    <div class="footer-links">
+      <a href="login.html">Login</a><a href="index.html">Recipes by Category</a><a href="index.html">Privacy and Copyright</a><a href="index.html">Create Recipe</a><a href="index.html">Your Recipes</a>
+    </div>
+    <div class="socials"><span aria-label="Facebook">f</span><span aria-label="Instagram">◎</span></div>
+  </footer>
+</body>
+</html>

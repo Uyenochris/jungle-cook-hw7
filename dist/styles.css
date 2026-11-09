@@ -1,0 +1,92 @@
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; color: #111; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+.site-header { position: relative; z-index: 5; }
+.nav-wrap { height: 115px; padding: 0 4%; display: flex; justify-content: space-between; align-items: center; }
+.logo { width: 175px; height: 60px; position: relative; flex-shrink: 0; }
+.bubble { position: absolute; display: block; border-radius: 50%; opacity: .85; }
+.bubble.blue { width: 34px; height: 34px; background: #b6e7e1; left: 0; top: 3px; }
+.bubble.gold { width: 31px; height: 31px; background: #ffdc70; left: 26px; top: 18px; }
+.bubble.green { width: 55px; height: 55px; background: #98e8b4; left: 53px; top: 5px; }
+.bubble.pink { width: 24px; height: 24px; background: #f5a9ad; left: 134px; top: 24px; }
+.logo-words { position: relative; z-index: 1; top: 17px; white-space: nowrap; font: italic 17px "Comic Sans MS", "Segoe Print", cursive; letter-spacing: 1px; }
+.main-menu { display: flex; align-items: center; gap: 37px; font: italic 20px "Comic Sans MS", "Segoe Print", cursive; letter-spacing: 2px; }
+.main-menu a[aria-current="page"]:not(.login-link) { border-bottom: 2px solid #111; }
+.main-menu .login-link { background: #ffdc78; border-radius: 35px; min-width: 158px; text-align: center; padding: 11px 29px; box-shadow: 0 7px 2px #0002; }
+.menu-toggle { display: none; background: transparent; border: 0; padding: 6px; cursor: pointer; }
+.menu-toggle span { display: block; height: 2px; width: 31px; background: #111; margin: 6px 0; }
+
+
+.home-page { min-height: 100vh; display: flex; flex-direction: column; background: linear-gradient(#ed8681a6,#ed8681a6),url("images/pizza-background.png") center/cover no-repeat; }
+.home-main { flex: 1; display: grid; place-items: center; padding: 30px 20px; }
+.hero-circles { width: 465px; height: 420px; position: relative; }
+.hero-circle { width: 355px; height: 355px; position: absolute; left: 0; top: 60px; background: #ffdc78; border-radius: 50%; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.hero-circle h1 { font: italic bold 22px "Comic Sans MS", "Segoe Print", cursive; letter-spacing: 2px; margin: 0 0 28px; }
+.hero-circle p { font-size: 14px; line-height: 1.18; letter-spacing: 1px; margin: 0; }
+.small-circle { position: absolute; left: 300px; top: 12px; width: 160px; height: 160px; padding: 42px 20px; border-radius: 50%; background: #ffbcb8; text-align: center; font-size: 11px; font-style: italic; }
+
+
+.login-page { min-height: 100vh; display: flex; flex-direction: column; background: #ffdb75; }
+.auth-layout { flex: 1; max-width: 750px; width: 100%; margin: 40px auto 45px; display: flex; gap: 155px; justify-content: space-between; }
+.auth-panel { width: 275px; }
+.login-panel { padding-top: 125px; }
+.auth-panel h1, .auth-panel h2 { font-size: 31px; font-weight: normal; letter-spacing: 3px; margin: 0 0 38px; }
+.auth-panel .small-intro { font-size: 12px; margin: 0 0 4px; letter-spacing: 1px; }
+.signup-panel h2 { margin-bottom: 40px; }
+.demo-form { display: flex; flex-direction: column; align-items: stretch; }
+.demo-form label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+.demo-form input { width: 100%; background: transparent; border: 0; border-bottom: 1px solid transparent; outline-offset: 2px; padding: 10px 0; margin-bottom: 25px; font-size: 12px; letter-spacing: 1px; }
+.demo-form input:focus { border-bottom-color: #111; }
+.demo-form input::placeholder { color: #111; opacity: 1; }
+.yellow-button { width: 210px; background: #ffdc78; border: none; border-radius: 30px; padding: 9px 20px; font: italic 21px "Comic Sans MS", "Segoe Print", cursive; letter-spacing: 3px; box-shadow: 0 9px 2px #0002; cursor: pointer; margin-top: 10px; }
+.form-message { min-height: 1.4em; font-size: 11px; }
+
+
+
+
+
+
+
+
+
+.site-footer { min-height: 45px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 10px 3%; font: italic 12px "Comic Sans MS", "Segoe Print", cursive; letter-spacing: .8px; }
+.footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.socials { display: flex; gap: 25px; font: normal 19px Arial, sans-serif; }
+.socials span:first-child { border: 1px solid #222; height: 18px; width: 14px; text-align: center; line-height: 19px; }
+
+@media (max-width: 900px) {
+  .main-menu { gap: 18px; font-size: 16px; }
+  .auth-layout { max-width: 650px; gap: 70px; }
+  .site-footer { font-size: 10px; }
+  .footer-links { gap: 13px; }
+}
+@media (max-width: 700px) {
+  .nav-wrap { height: 105px; }
+  .menu-toggle { display: block; }
+  .main-menu { display: none; position: absolute; right: 15px; top: 85px; width: 210px; background: #ffdb75; border: 1px solid #555; padding: 20px; box-shadow: 2px 4px 4px #0003; flex-direction: column; gap: 15px; align-items: stretch; text-align: center; }
+  .main-menu.is-open { display: flex; }
+  .home-page .main-menu { background: #ffbeb6; }
+  .main-menu .login-link { min-width: 0; }
+  .home-main { padding: 10px 20px 25px; }
+  .hero-circles { width: 310px; height: 350px; }
+  .hero-circle { width: 270px; height: 270px; top: 55px; left: 20px; }
+  .hero-circle h1 { font-size: 18px; margin-bottom: 23px; }
+  .hero-circle p { font-size: 11px; }
+  .small-circle { width: 120px; height: 120px; padding: 29px 14px; top: 6px; left: 170px; font-size: 9px; }
+  .auth-layout { display: block; width: 205px; max-width: none; margin: 60px auto 35px; }
+  .auth-panel { width: 205px; }
+  .login-panel { padding-top: 0; }
+  .signup-panel { margin-top: 85px; }
+  .auth-panel h1, .auth-panel h2 { font-size: 28px; white-space: nowrap; }
+  .demo-form input { margin-bottom: 23px; }
+  .yellow-button { width: 205px; }
+  .site-footer { flex-wrap: wrap; row-gap: 14px; padding: 20px 5%; }
+  .footer-links { order: 3; width: 100%; }
+}
+
+
+.your-recipes-link[hidden] { display: none; }
+.yellow-button:disabled { opacity: 0.65; cursor: wait; }
+.form-message { line-height: 1.5; }
